@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>theCreative</title>
+</head>
+
+<body>
+    <div class="landing">
+        <div class="titleLanding">
+            <h1 class="title">the<br> creative <span class="flash">.</span></h1>
+        </div>
+    </div>
+    <div id="timer"></div>
+    <script>
+        function updateTimer() {
+            future = Date.parse("November 11, 2019 11:30:00");
+            now = new Date();
+            diff = future - now;
+
+            days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            hours = Math.floor(diff / (1000 * 60 * 60));
+            mins = Math.floor(diff / (1000 * 60));
+            secs = Math.floor(diff / 1000);
+
+            d = days;
+            h = hours - days * 24;
+            m = mins - hours * 60;
+            s = secs - mins * 60;
+
+            document.getElementById("timer")
+                .innerHTML =
+                '<div>' + d + '<span>days</span></div>' +
+                '<div>' + h + '<span>hours</span></div>' +
+                '<div>' + m + '<span>minutes</span></div>' +
+                '<div>' + s + '<span>seconds</span></div>';
+        }
+        setInterval('updateTimer()', 1000);
+    </script>
+</body>
+
+</html>

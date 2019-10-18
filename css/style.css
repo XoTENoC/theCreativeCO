@@ -1,0 +1,82 @@
+/* fonts */
+
+@font-face {
+    font-family: 'BebasNeue';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/BebasNeue/BebasNeue Regular.otf') format('opentype');
+}
+
+
+/* reset */
+
+
+/* html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+} */
+
+
+/* title */
+
+h1 {
+    font-family: sans-serif;
+    font-size: 5rem;
+    padding-left: auto;
+    padding-right: auto;
+    line-height: 3rem;
+}
+
+.titleLanding {
+    padding: 1em;
+}
+
+
+/* landing */
+
+.landing {
+    margin: 0px;
+    margin-top: 35vh;
+}
+
+
+/* dot fadeIn and fadeOut */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+
+.flash {
+    animation: fadeIn 0.5s infinite alternate;
+    font-size: 7rem;
+}
+
+
+/* timer */
+
+#timer {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 100;
+    color: black;
+    font-family: "Helvetica Neue", "Open Sans", helvetica, arial, sans-serif;
+    display: inline-block;
+}
+
+#timer div {
+    display: inline-block;
+    min-width: 90px;
+}
+
+#timer span {
+    display: block;
+    font-size: .35em;
+    font-weight: 400;
+}
